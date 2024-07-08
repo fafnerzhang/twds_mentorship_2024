@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  dev:
+    build:
+      context: .  
+      dockerfile: Dockerfile  # Path to the Dockerfile
+    volumes:
+      - ..:/root  
+    command: ["sleep", "infinity"]  
+    ports:
+      - "8000:8000"
